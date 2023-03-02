@@ -3,7 +3,7 @@
 - imapct
     - use root permission to excute command
 
--Breakout Privileged
+- Breakout Privileged
     - all
     - (unsure)
 

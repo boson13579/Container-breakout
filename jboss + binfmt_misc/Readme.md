@@ -10,7 +10,7 @@
             - 用工具 https://github.com/joaomatosf/jexboss
             - Use command: python3 jexboss.py -D --jboss -host http://127.0.0.1:8080
 
--Breakout Privileged
+- Breakout Privileged
     - all
     - actually CAP_ADMIN
 

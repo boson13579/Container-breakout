@@ -3,7 +3,7 @@
 - imapct
     - control other process and have same permission as the target process
 
--Breakout Privileged
+- Breakout Privileged
     - all
     - actually SYS_PTRACE
 
