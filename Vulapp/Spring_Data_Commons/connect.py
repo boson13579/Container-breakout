@@ -7,5 +7,3 @@ r = requests.post(url,data = data)
 
 print(r)
 print(r.text)   
-
-#change content of exec
