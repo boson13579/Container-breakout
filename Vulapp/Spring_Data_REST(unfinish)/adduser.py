@@ -16,9 +16,9 @@ data = {"firstName": "VulApps", "lastName": "VulApps"}
 #         }
 #         }
 
-header = {"Content-Type": "application/json", "Cache-Control": "no-cache"}
+headers = {"Content-Type": "application/json", "Cache-Control": "no-cache"}
 
-r = requests.post(url=url, data=data, headers=header)
+r = requests.post(url=url, headers = headers , data = data)
 
 print(r.text)
 print(r)
